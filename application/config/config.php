@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$base_url = "https://app.iotinventor.com/";
+$base_url = "https://app.iotinventor.org/";
 if (ENVIRONMENT !== 'production') {
 	$base_url = "http://localhost/iotinventor/";
 }
