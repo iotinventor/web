@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php $this->load->view('partials/head.php'); ?>
-  <title>Editor: IoT Inventor</title>
+  <title>IoT Inventor</title>
 </head>
 <body onbeforeunload="alert('ups')">
   
@@ -22,15 +22,14 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h5 class="modal-title " id="exampleModalLabel">Kode Kompilasi</h5>
+          <h5 class="modal-title " id="exampleModalLabel">Connect your board!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p>
-            Buka aplikasi IoTJunior Plugin di komputer kamu dan salin kode berikut untuk 
-            mengkompilasi mikrokontroler.
+            Open the IoTInventor Plugin application on your computer and copy the following code to compile the microcontroller.
           </p>
-          <input type="text" class="form-control text-center" aria-describedby="button-addon2" id="pCode">
+          <input readonly onfocus="this.select();" type="text" class="form-control text-center" aria-describedby="button-addon2" id="pCode">
         </div>
       </div>
     </div>

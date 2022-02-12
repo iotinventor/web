@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php $this->load->view('partials/head.php'); ?>
-  <title>Project Saya</title>
+  <title>My Projects</title>
 </head>
 <body>
   <?php $this->load->view("partials/navbar.php"); ?>
@@ -19,18 +19,17 @@
       <?php if ($projects): ?>
         <?php foreach ($projects as $project): ?>
           <div class="col-md-3 my-3">
-            <div class="card shadow-sm">
+            <div class="card shadow-sm border-dark">
               <div class="card-body">
                 <h5 class="card-title text-truncate">
-                  <i class="bi bi-code-square"></i>
                   <?= $project->title ?>
                 </h5>
                 <h6 class="card-subtitle mb-2 text-muted ">
                   <span class=""><?= ucfirst($project->display_name) ?> </span>
                 </h6>
-                <p><small>Tanggal <?= date("D, d M Y", strtotime($project->created)); ?></small></p>
+                <p><small><?= date("D, d M Y", strtotime($project->created)); ?></small></p>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button type="button" class="btn btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-gear-fill"></i>
                   </button>
                   <ul class="dropdown-menu">
@@ -55,6 +54,12 @@
             </div>
           </div>
         <?php endforeach ?>
+      <?php endif; ?>
+
+      <?php if ( empty($projects) ): ?>
+        <div class="col-md-12 mt-5">
+          <img width="500" src="<?= site_url('assets/images/myprojects.png'); ?>" class="img-fluid mx-auto d-block" alt="">
+        </div>
       <?php endif; ?>
       <nav class="mt-4" aria-label="Page navigation example">
         <?= $pagination; ?>

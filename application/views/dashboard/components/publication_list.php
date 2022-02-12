@@ -2,7 +2,7 @@
   <?php if (!empty($publications)): ?>
     <?php foreach ($publications as $publication): ?>
       <div class="col-md-6 my-3">
-      <div class="card shadow-sm">
+      <div class="card shadow-sm border-dark">
           <div class="card-body">
             <h5 class="card-title text-truncate"><?= $publication->title ?></h5>
             <h6 class="card-subtitle mb-2 text-muted">
@@ -15,11 +15,11 @@
             <p class="text-truncate">
               <small ><?= $publication->description ?></small>
             </p>
-            <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-sm btn-primary">
+            <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-sm btn-dark">
               Clone
             </a>
             <?php if ($publication->link_tutorial !== NULL): ?>
-            <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-sm btn-primary">
+            <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-sm btn-dark">
               Tutorial
             </a>
             <?php endif; ?>

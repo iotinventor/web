@@ -12,7 +12,8 @@
   <div class="container">
     <div class="row vh-100 d-flex justify-content-center align-items-center">
       <div class="col-md-5">
-        <div class="card shadow">
+        <div class="card shadow border-dark">
+          <img src="<?= site_url('/assets/images/card-image.png'); ?>" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title"><?= $publication->title ?></h5>
             <h6 class="card-subtitle mb-2 text-muted">
@@ -20,7 +21,9 @@
               <br />
               <small><?= date("D, d M Y", strtotime($publication->created)); ?></small>
               <br>
-              <small><?= $publication->publisher ?></small>
+              <small>
+                <span class="badge bg-secondary">published by <?= $publication->publisher ?></span>
+              </small>
             </h6>
             <p></p>
             <p>
@@ -32,8 +35,8 @@
                 <input type="text" name="title" class="form-control" value="<?= $publication->title ?>">
               </div>
               <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Clone</button>
-                <a href="<?= $_SERVER['HTTP_REFERER'] ?>" class="btn btn-light">Back</a>
+                <button type="submit" class="btn btn-dark">Clone</button>
+                <a href="<?= $_SERVER['HTTP_REFERER'] ?>" class="btn btn-secondary">Back</a>
               </div>
             </form>
           </div>

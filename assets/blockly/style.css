@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  background-color: #fff;
+  background-color: #212529;;
   overflow: hidden;
 }
 
@@ -19,6 +19,9 @@ table {
   width: 100%;
 }
 
+.blocklyMainBackground  {
+  stroke: #212529 !important;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -57,19 +60,25 @@ table {
 	width: auto !important;
   margin: 0.3em 0.8em;
   border-radius: 4px;
-	background-color: #d63384 !important;
+	background-color: #58595a !important;
 	color: #fff !important;
 	font-size: x-small !important;
   font-weight: bold;
 }
 
 .blocklyTreeRow:hover {
-	background-color: #0d6efd !important;
+	background-color: #181818 !important;
 	color: #fff !important;
 }
 
+.blocklyTreeRoot, .blocklyToolboxDiv {
+  background-color: #212529 !important;
+}
+
+
+
 div.blocklyTreeRow.blocklyTreeSelected {
-	background-color: #0d6efd !important;
+	background-color: #181818 !important;
 	color: #fff !important;
 }
 
@@ -92,7 +101,15 @@ div.blocklyTreeRow.blocklyTreeSelected {
 .blocklyTreeRoot {
   width: auto !important;
 }
+/* 
+path.blocklyFlyoutBackground {
+  background-color: #212529 !important;
+} */
 
+.myLabelStyle:before {
+  content: "Yuhuuu";
+  font-size: large;
+}
 
 #textareaTerminal {
 	background-color: #000;

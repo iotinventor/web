@@ -13,8 +13,9 @@
     <div class="row vh-100 d-flex justify-content-center align-items-center">
       <div class="col-md-5">
         <div class="card shadow">
+          <img src="<?= site_url('/assets/images/card-image.png'); ?>" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title">Publish this project</h5>
+            <h5 class="card-title">Publish <?= $project->title; ?></h5>
             <form action="" method="post">
               <div class="mb-3">
                 <label class="form-label">Title</label>
@@ -29,8 +30,8 @@
                 <input name="link_tutorial" class="form-control" placeholder="Leave a link tutorial here" />
               </div>
               <div class="mb-3">
-                <button class="btn btn-primary" type="submit">Publish</button>
-                <a href="<?= site_url('project'); ?>" class="btn btn-light" type="submit" >Back</a>
+                <button class="btn btn-dark" type="submit">Publish</button>
+                <a href="<?= site_url('project'); ?>" class="btn btn-secondary" type="submit" >Back</a>
               </div>
             </form>
           </div>

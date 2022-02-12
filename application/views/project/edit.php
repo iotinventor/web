@@ -12,7 +12,8 @@
   <div class="container">
     <div class="row vh-100 d-flex justify-content-center align-items-center">
       <div class="col-md-5">
-        <div class="card shadow">
+        <div class="card shadow border-dark">
+          <img src="<?= site_url('/assets/images/card-image.png'); ?>" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">Edit <?= $project->title ?></h5>
             <form action="" method="post">
@@ -21,8 +22,8 @@
                 <input type="text" name="title" class="form-control" value="<?= $project->title ?>" id="exampleFormControlInput1" placeholder="<?= $project->title ?>">
               </div>
               <div class="mb-3">
-                <button class="btn btn-primary" type="submit">Save</button>
-                <a href="<?= site_url('project'); ?>" class="btn btn-light" type="submit" >Back</a>
+                <button class="btn btn-dark" type="submit">Save</button>
+                <a href="<?= site_url('project'); ?>" class="btn btn-secondary" type="submit" >Back</a>
               </div>
             </form>
           </div>

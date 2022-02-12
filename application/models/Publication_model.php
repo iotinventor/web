@@ -113,10 +113,11 @@ class Publication_model extends CI_Model {
 
   public function get($id)
   {
-    $this->db->select('*');
-    $this->db->from($this->table);
-    $this->db->where('id', $id);
-    $result = $this->db->get();
+    $result = $this->db->select("*, boards.id as board_id, publication.id as id")
+      ->from($this->table)
+      ->where("publication.id='$id'")
+      ->join('boards', "$this->table.board_id = boards.id")
+      ->get();
 
     if ( $result )
     {

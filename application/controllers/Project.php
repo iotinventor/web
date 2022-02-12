@@ -113,6 +113,7 @@ class Project extends MY_Controller {
 
     if ($this->input->server('REQUEST_METHOD') === 'GET') {
       $data['project'] = $project;
+      $data['controller'] = 'project';
       $this->load->view('project/edit', $data);
     } else {
       $this->project_model->edit($id, $this->input->post('title'));

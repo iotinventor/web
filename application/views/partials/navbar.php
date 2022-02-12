@@ -1,7 +1,9 @@
-<nav class="navbar navbar-expand-lg shadow navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg shadow navbar-dark bg-dark border-bottom border-secondary">
   <div class="container-fluid">
     <a class="navbar-brand text-light" href="<?= site_url(''); ?>">
-      <span class="fw-bold">IoTJunior</span>
+      <span class="fw-bold">
+        <i class="bi bi-cpu-fill"></i> IoTInventor
+      </span>
       <span class="fw-light fs-6">App</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,13 +23,13 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
               <li><a class="dropdown-item" href="<?= site_url('dashboard'); ?>">Dashboard</a></li>
-              <li><a class="dropdown-item" href="<?= site_url('project/list'); ?>">Project Saya</a></li>
-              <li><a class="dropdown-item" href="<?= site_url('publication/list'); ?>">Publikasi Saya</a></li>
+              <li><a class="dropdown-item" href="<?= site_url('project/list'); ?>">My Projects</a></li>
+              <li><a class="dropdown-item" href="<?= site_url('publication/list'); ?>">My Publication</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="<?= site_url(''); ?>">Komunitas</a></li>
+              <li><a class="dropdown-item" href="<?= site_url(''); ?>">Community</a></li>
               <li><a class="dropdown-item" target="_blank" href="<?= site_url('webserial'); ?>">Web Serial</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="<?= site_url('auth/signout'); ?>">Keluar</a></li>
+              <li><a class="dropdown-item" href="<?= site_url('auth/signout'); ?>">Sign Out</a></li>
             </ul>
           </li>
         <?php endif ?>
@@ -41,27 +43,28 @@
       </ul>
       <div class="d-flex">
         <?php if ( $controller === 'project' || $controller === "dashboard" ): ?>
-          <button class="btn btn-light text-primary fw-bold" data-bs-toggle="modal" data-bs-target="#modalCreateProject">Buat Project</button>
+          <button class="btn btn-light fw-bold" data-bs-toggle="modal" data-bs-target="#modalCreateProject">
+            <i class="bi bi-plus-circle-fill"></i> New Project
+          </button>
         <?php endif; ?>
         <?php if ( $controller === 'webserial' ): ?>
           <button class="btn btn-outline-secondary fw-bold" >Refresh</button>
           &nbsp;
           &nbsp;
-          <button class="btn btn-primary fw-bold" id="openSerial">Buka Serial</button>
+          <button class="btn btn-primary fw-bold" id="openSerial">Open Serial</button>
         <?php endif; ?>
         <?php if ( $controller === 'app' ): ?>
           <div class="btn-group" role="group" aria-label="Basic example">
             <a href="<?= site_url('project'); ?>" class="btn btn-secondary text-light">
-              <i class="bi bi-x-square"></i> Exit
+              <i class="bi bi-x-square"></i> Close
             </a>
-            <button type="button" title="Connect" class="btn btn-danger text-light" id="linkConnect">
-              <i class="bi bi-cloud-arrow-down"></i> Connect
+            <button type="button" title="Connect" class="btn btn-light fw-bold" id="linkConnect">
+            <i class="bi bi-app-indicator"></i> Connect
             </button>
-            <button id="linkSave" onclick="save()" title="Simpan project" type="button" class="btn btn-danger text-light">
-              <i class="bi bi-save2"></i> Simpan
+            <button id="linkSave" onclick="save()" type="button" class="btn btn-light fw-bold">
+              <i class="bi bi-cloud-download-fill"></i> Save
             </button>
           </div>
-        
         <?php endif; ?>
       </div>
     </div>
@@ -70,21 +73,21 @@
 
 <?php if ( !empty($this->session->userdata('is_authenticated')) ): ?>
 <div class="modal fade" id="modalCreateProject" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Buat Project</h5>
+          <h5 class="modal-title" id="exampleModalLabel">New Project</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form action="<?= site_url("project/create"); ?>" method="post">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Judul Project</label>
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
             <input type="text" class="form-control" name="title" placeholder="My ESP32 Project">
           </div>
           <div class="mb-3">
-            <a class="btn btn-outline-light btn-sm text-primary" data-bs-toggle="collapse" href="#boardOptions" role="button" aria-expanded="false" aria-controls="collapseExample">
-              <i class="bi bi-caret-right-fill"></i> Pilihan board
+            <a class="btn btn-outline-light btn-sm text-secondary" data-bs-toggle="collapse" href="#boardOptions" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i class="bi bi-caret-right-fill"></i> Board options
             </a>
           </div>
           <div class="collapse" id="boardOptions">
@@ -100,7 +103,7 @@
             </div>
           </div>
           <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="submit" class="btn btn-dark">Save</button>
           </div>
           </form>
         </div>
