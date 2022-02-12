@@ -1,3 +1,4 @@
+<link rel="icon" href="<?=base_url()?>/favicon.png" type="image/png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 <link href="<?php echo base_url('assets/bootstrap5/css/bootstrap.min.css'); ?>" rel="stylesheet">
 <script src="<?= base_url('assets/bootstrap5/js/bootstrap.bundle.min.js'); ?>"></script>

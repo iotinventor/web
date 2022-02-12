@@ -15,9 +15,9 @@
     <div class="row vh-100 d-flex justify-content-center align-items-center">
       <div class="col-md-4">
         <div class="card shadow">
-          <img src="<?= base_url('assets/images/smarthome.png'); ?>" class="card-img-top">
+          <img src="<?= base_url('assets/images/card-image-signup.png'); ?>" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title fw-bold">Daftar IoTJunior</h5>
+            <h5 class="card-title fw-bold">Join with IoTInventor App</h5>
             <form action="" class="mt-3" method="post">
               <div class="mb-3">
                 <label class="form-label">Email address</label>
@@ -37,9 +37,13 @@
                   <input type="text" name="last_name" class="form-control" placeholder="Last name" aria-label="Last name">
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary fw-bold">Daftar</button>
-              <a href="<?= site_url('auth'); ?>" class="btn btn-outline-primary">Ke halaman Login</a>
-              <a href="<?= site_url(''); ?>" class="btn btn-light">Batal</a>
+              <button type="submit" class="btn btn-dark fw-bold">
+                Submit
+              </button>
+              <a href="<?= site_url('auth'); ?>" class="btn btn-outline-dark">
+                already registered?
+              </a>
+              <a href="<?= site_url(''); ?>" class="btn btn-light">cancel</a>
             </form>
           </div>
         </div>

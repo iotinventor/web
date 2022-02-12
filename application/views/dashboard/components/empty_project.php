@@ -1,0 +1,1 @@
+<img width="500" src="<?= site_url('assets/images/myprojects.png'); ?>" class="img-fluid mx-auto d-block" alt="">

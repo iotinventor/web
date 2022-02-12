@@ -15,10 +15,10 @@
   <main class="form-signin">
     <form method="post" action="<?= site_url('auth/signout'); ?>">
       <i class="bi bi-door-closed fs-1"></i>
-      <h1 class="h3 mb-3 fs-5 fw-normal">Kamu yakin mau keluar nih! Pastiin lagi yah...</h1>
-      <a class="w-100 btn btn-primary mb-2" href="<?= site_url('dashboard'); ?>">Enggak Deh</a>
-      <button class="w-100 btn btn-outline-primary" type="submit">Ya</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2022 IoTJunior</p>
+      <h1 class="h3 mb-3 fs-5 fw-normal">Are you sure you want to leave? Make sure!</h1>
+      <a class="w-100 btn btn-dark mb-2" href="<?= site_url('dashboard'); ?>">Hmm, not sure!</a>
+      <button class="w-100 btn btn-secondary" type="submit">Sure</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2022 IoTInventor.org for Education</p>
     </form>
   </main>
   <script src="<?php echo base_url('assets/bootstrap5/js/bootstrap.min.js') ?>"></script>

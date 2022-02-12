@@ -33,6 +33,7 @@
     </block>
   </category>
   <category name="Core">
+    
     <block type="use_millis">
       <field name="1000">1000</field>
     </block>
@@ -141,6 +142,7 @@
       <field name="param">param</field>
     </block>
   </category>
+  <sep></sep>
   <category name="Logic">
     <block type="controls_if"></block>
     <block type="logic_compare"></block>

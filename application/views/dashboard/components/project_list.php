@@ -2,18 +2,18 @@
   <div class="row">
     <?php foreach ($projects as $project): ?>
       <div class="col-md-4 my-3">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm border-dark">
           <div class="card-body">
             <h5 class="card-title text-truncate">
-              <i class="bi bi-file-earmark-code-fill"></i>
+              <!-- <i class="bi bi-file-earmark-code-fill"></i> -->
               <?= $project->title ?>
             </h5>
             <h6 class="card-subtitle mb-2 text-muted ">
               <span class=""><?= ucfirst($project->display_name) ?> </span>
             </h6>
-            <p><small>Tanggal <?= date("D, d M Y", strtotime($project->created)); ?></small></p>
+            <p><small><?= date("D, d M Y", strtotime($project->created)); ?></small></p>
             <div class="btn-group btn-sm">
-              <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" class="btn btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-gear-fill"></i>
               </button>
               <ul class="dropdown-menu">

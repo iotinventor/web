@@ -13,9 +13,9 @@ var blocklyWorkspace = Blockly.inject(
     toolbox: document.getElementById("toolbox"),
     scroll: true,
     grid:
-         {spacing: 17,
+         {spacing: 1,
           length: 1,
-          colour: '#888',
+          colour: '#212529',
           // colour: '#fff',
           snap: true},
     zoom:
@@ -65,7 +65,7 @@ blocklyWorkspace.addChangeListener(function (event) {
   var xml_latest = <?= $project->block ? $project->block:''; ?>;
 
   if ( xml_latest !== xml_text ) {
-    linkSave.innerHTML = `<span class="spinner-grow text-primary spinner-grow-sm" role="status" aria-hidden="true"></span> <i class="bi bi-save2"></i>`;
+    linkSave.innerHTML = `<span class="spinner-grow text-danger spinner-grow-sm" role="status" aria-hidden="true"></span> <i class="bi bi-cloud-download-fill"></i> Save`;
     linkConnect.removeAttribute('data-bs-toggle');
     linkConnect.removeAttribute('data-bs-target');
   } else {
@@ -105,7 +105,7 @@ function save() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        linkSave.innerHTML = `<i class="bi bi-save2"></i>`;
+        linkSave.innerHTML = `<i class="bi bi-cloud-download-fill"></i> Save`;
         linkConnect.setAttribute('data-bs-toggle', 'modal');
         linkConnect.setAttribute('data-bs-target', '#modalCompile'); 
         console.log(this.response);

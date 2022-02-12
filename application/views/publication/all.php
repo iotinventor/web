@@ -36,7 +36,7 @@
       <?php if ($publications): ?>
         <?php foreach ($publications as $publication): ?>
           <div class="col-md-3 my-3">
-            <div class="card shadow">
+            <div class="card shadow border-dark">
               <div class="card-body">
                 <h5 class="card-title text-truncate"><?= $publication->title ?></h5>
                 <h6 class="card-subtitle mb-2 text-muted">
@@ -50,11 +50,11 @@
                 <p class="text-truncate">
                   <small ><?= $publication->description ?></small>
                 </p>
-                <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-primary">
+                <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-dark">
                   Clone
                 </a>
                 <?php if ($publication->link_tutorial !== NULL): ?>
-                <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-outline-primary">
+                <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-outline-dark">
                   Tutorial
                 </a>
                 <?php endif; ?>
