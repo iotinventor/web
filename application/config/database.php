@@ -82,9 +82,9 @@ if (ENVIRONMENT !== 'production') {
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'iotx7158_admin',
+	'username' => 'iotinven_admin',
 	'password' => $password,
-	'database' => 'iotx7158_app',
+	'database' => 'iotinven_editor',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
