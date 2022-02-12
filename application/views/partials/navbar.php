@@ -56,7 +56,7 @@
         <?php if ( $controller === 'app' ): ?>
           <div class="btn-group" role="group" aria-label="Basic example">
             <a href="<?= site_url('project'); ?>" class="btn btn-secondary text-light">
-              <i class="bi bi-x-square"></i> Close
+              <i class="bi bi-x-circle"></i> Close
             </a>
             <button type="button" title="Connect" class="btn btn-light fw-bold" id="linkConnect">
             <i class="bi bi-app-indicator"></i> Connect
