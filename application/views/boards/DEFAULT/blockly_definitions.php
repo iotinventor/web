@@ -1,0 +1,10 @@
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/base.js') ?>"></script>
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/colour.js') ?>"></script>
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/grove.js') ?>"></script>
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/lists.js') ?>"></script>
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/logic.js') ?>"></script>
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/loops.js') ?>"></script>
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/math.js') ?>"></script>
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/procedures.js') ?>"></script>
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/text.js') ?>"></script>
+<script src="<?php echo base_url('assets/blockly/blockly/blocks/variables.js') ?>"></script>
