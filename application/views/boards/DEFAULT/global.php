@@ -73,7 +73,7 @@ function validatorFunction(block, message="Please add this statement into proced
 
 function validatorAll(block, message="Please add this statement into setup, forever or functions!") {
   var type = block.getRootBlock().type
-  if (type === 'forever' || type === 'setup' || type === 'procedures_defreturn' || type="server_on") {
+  if (type === 'forever' || type === 'setup' || type === 'procedures_defreturn' || type==="server_on") {
     block.setWarningText(null);
     return true;
   } else {
