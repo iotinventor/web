@@ -40,16 +40,31 @@ function buildArrow(key) {
 
 Blockly.Arduino['on_start'] = function(block) {
   var statements_statements = Blockly.Arduino.statementToCode(block, 'statements');
-
-  Blockly.Arduino.setups_['setups'] = statements_statements;
-  var code = '';
-  return code;
+  if (Blockly.Arduino.definitions_['on_start']) {
+    blocklyWorkspace.getBlockById(block.id).setWarningText("Duplicate on start!");
+    delete Blockly.Arduino.definitions_['on_start'];
+    return '';
+  } else {
+    blocklyWorkspace.getBlockById(block.id).setWarningText(null);
+    Blockly.Arduino.definitions_['on_start'] = '// on_start';
+    Blockly.Arduino.setups_['setups'] = statements_statements;
+    var code = '';
+    return code;
+  }
 };
 
 Blockly.Arduino['forever'] = function(block) {
-  var statements_statements = Blockly.Arduino.statementToCode(block, 'statements');
-  var code = statements_statements;
-  return code;
+  if (Blockly.Arduino.definitions_['forever']) {
+    blocklyWorkspace.getBlockById(block.id).setWarningText("Duplicate forever!");
+    delete Blockly.Arduino.definitions_['forever'];
+    return '';
+  } else {
+    blocklyWorkspace.getBlockById(block.id).setWarningText(null);
+    Blockly.Arduino.definitions_['forever'] = '// forever';
+    var statements_statements = Blockly.Arduino.statementToCode(block, 'statements');
+    var code = statements_statements;
+    return code;
+  }
 };
 
 Blockly.Arduino['add_icon_to_screen'] = function(block) {

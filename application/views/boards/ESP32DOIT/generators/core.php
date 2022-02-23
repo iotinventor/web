@@ -4,6 +4,7 @@
 Blockly.Arduino['setup'] = function(block) {
   var statements_setup = Blockly.Arduino.statementToCode(block, 'setup');
   Blockly.Arduino.setups_['setups'] = statements_setup;
+  
   var code = '';
   return code;
 };
