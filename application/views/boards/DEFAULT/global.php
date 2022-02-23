@@ -14,6 +14,18 @@ function validatorSetup(block, message="Please add this statement into setup!") 
 }
 
 
+function validatorOnStart(block, message="Please add this statement into onstart!") {
+  var type = block.getRootBlock().type
+  if (type === 'on_start') {
+    block.setWarningText(null);
+    return true;
+  } else {
+    block.setWarningText(message);
+    return false;
+  }
+}
+
+
 function validatorForever(block, message="Please add this statement into forever!") {
   var type = block.getRootBlock().type
   if (type === 'forever') {
@@ -70,10 +82,29 @@ function validatorFunction(block, message="Please add this statement into proced
   }
 }
 
+function on_bluetooth_is_available(block, message="Please add this statement into bluetooth is available!") {
+  var type = block.getRootBlock().type;
+  if (type === 'on_bluetooth_is_available') {
+    block.setWarningText(null);
+    return true;
+  } else {
+    block.setWarningText(message);
+    return false;
+  }
+}
+
 
 function validatorAll(block, message="Please add this statement into setup, forever or functions!") {
   var type = block.getRootBlock().type
-  if (type === 'forever' || type === 'setup' || type === 'procedures_defreturn' || type==="server_on") {
+  if (
+      type === 'forever' || 
+      type === 'setup' || 
+      type === "on_start" || 
+      type === 'procedures_defreturn' || 
+      type==="on_bluetooth_is_available" ||
+      type==="on_wifi_try_to_connect" ||
+      type==="on_wifi_is_connected"
+    ) {
     block.setWarningText(null);
     return true;
   } else {

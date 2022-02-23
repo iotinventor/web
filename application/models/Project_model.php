@@ -207,7 +207,7 @@ class Project_model extends CI_Model {
 
   public function default_block()
   {
-    return '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="setup" id="1" x="11" y="11"></block><block type="forever" id="2" x="11" y="95"></block></xml>';
+    return '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="on_start" id="1" x="11" y="11"></block><block type="forever" id="2" x="11" y="95"></block></xml>';
   }
 
   public function get_code($code)

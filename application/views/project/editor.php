@@ -37,6 +37,8 @@
 
 
   <?php $this->load->view("boards/" . $project->board_name . "/" . $project->toolbox_file) ?>
+  <?php $this->load->view("boards/DEFAULT/pins.php"); ?>
+  <?php $this->load->view("boards/DEFAULT/icons.php"); ?>
   <?php $this->load->view("boards/DEFAULT/global.php"); ?>
   <?php $this->load->view("boards/DEFAULT/blockly_workspace.php"); ?>
   <?php $this->load->view("boards/DEFAULT/blockly_definitions.php"); ?>
